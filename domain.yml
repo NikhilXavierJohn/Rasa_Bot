@@ -1,0 +1,74 @@
+actions:
+- action_book_hotel
+- action_mongo_query
+- utter_cheer_up
+- utter_did_that_help
+- utter_goodbye
+- utter_greet
+- utter_happy
+- utter_iamabot
+- utter_query
+- utter_query_list
+- utter_query_locale
+- utter_query_people
+- utter_search
+entities:
+- exit
+- facility_type
+- hotel_name
+- location
+- people
+intents:
+- places
+- select_people
+- greet_exit
+- select_hotel
+- get_details
+- get_details1
+- affirm
+- booking_bot
+- greet
+- goodbye
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- search_provider
+- booking_bot_locale
+session_config:
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 60
+slots:
+  facility_type:
+    type: text
+  hotel_name:
+    type: text
+  location:
+    type: text
+  people:
+    type: text
+templates:
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_goodbye:
+  - text: Bye
+  utter_greet:
+  - text: Hey! How may i help You?
+  utter_happy:
+  - text: Great, carry on!
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_query:
+  - text: At which {facility_type} would you like to stay in {location}
+  utter_query_list:
+  - text: Which city would you like to get a list of {facility_type}
+  utter_query_locale:
+  - text: At which city would you like to book your {facility_type} in ?
+  utter_query_people:
+  - text: How many People will be staying?
+  utter_search:
+  - text: Booking you a {facility_type} at the {hotel_name} for {people} poeple in
+      {location}
